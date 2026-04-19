@@ -21,13 +21,13 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "3000" // changed default from 8080 to 3000 for my local setup
 	}
 
-	log.Printf("ds2api %s (%s) built at %s", version, commit, server on port %s", port)
+	log.Printf("ds2api %s (%s) built at %s, server on port %s", version, commit, date, port)
 
 	server := NewServer()
-	if err := server.Run" + port); err != nil {
+	if err := server.Run(":" + port); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }
