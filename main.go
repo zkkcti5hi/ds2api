@@ -27,7 +27,7 @@ func main() {
 	// LOG_LEVEL can be set to control verbosity; currently just informational
 	logLevel := os.Getenv("LOG_LEVEL")
 	if logLevel == "" {
-		logLevel = "debug" // default to debug locally so I can see more detail while learning the codebase
+		logLevel = "info" // switched from debug to info to reduce noise once I got familiar with the codebase
 	}
 
 	log.Printf("ds2api %s (%s) built at %s, server on port %s [log_level=%s]", version, commit, date, port, logLevel)
